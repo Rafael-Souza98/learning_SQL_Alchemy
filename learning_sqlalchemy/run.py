@@ -1,8 +1,10 @@
-from infra.repository.filems_repository import FilmesRepository
+from infra.repository.atores_repository import AtoresRepository
+from infra.repository.filmes_repository import FilmesRepository
 
-repo = FilmesRepository()
-repo.insert('Jumanji', 'Aventura', '1999')
-repo.delete('Superman')
-data = repo.select()
 
-print(data)
+
+repo2 = FilmesRepository()
+response2 = repo2.select()
+filme = response2[0]
+print(filme.atores)
+print(filme.titulo)

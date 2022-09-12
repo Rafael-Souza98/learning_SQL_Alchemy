@@ -14,7 +14,8 @@ class DBConnetionHandler:
         return engine
     
     def get_engine(self):
-        self.__engine
+        self._engine 
+        
         
     def __enter__(self):
         session = Session(self.__engine)
